@@ -1,6 +1,0 @@
-Test Case,Description,Observation,Result
-TC-SQL-001,Verify product count,"Expected 6, Actual 6",PASS
-TC-SQL-004,Verify no negative product prices,"Expected 0 rows, Actual 0 rows",PASS
-TC-SQL-007,Verify product price ascending order,"Expected ['Mouse', 'Keyboard', 'Headphones', 'Office Chair', 'Desk', 'Laptop'], Actual ['Mouse', 'Keyboard', 'Headphones', 'Office Chair', 'Desk', 'Laptop']",PASS
-TC-SQL-008,Verify orders reference valid users,"Expected 0 orphan orders, Actual 0",PASS
-TC-SQL-010,Verify order items reference valid products,"Expected 0 orphan items, Actual 0",PASS
