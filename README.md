@@ -1,42 +1,26 @@
-# 🧪 QA Engineer Internship Portfolio
+# QA Engineer Internship Portfolio
 
-A hands-on Quality Assurance testing portfolio demonstrating practical skills in manual testing, test case design, defect reporting, API testing, SQL validation, and test automation.
-
-This portfolio is being developed through actual testing activities on a permitted practice e-commerce application.
+A practical Software Quality Assurance portfolio demonstrating manual testing, API testing, SQL/database validation, UI automation, and CI/CD.
 
 ---
 
-## 👨‍💻 Tester
+## 👨‍💻 About
 
-**Name:** Selvan L  
-**Role:** Aspiring QA Engineer  
-**Focus:** Manual Testing | API Testing | SQL | Test Automation
+This repository documents my practical QA testing work and learning journey.
 
----
-
-# 🎯 Portfolio Objective
-
-The objective of this project is to demonstrate the complete QA testing lifecycle:
+The goal is to demonstrate how I approach software quality from multiple layers:
 
 ```text
-Requirement Analysis
-        ↓
-Test Planning
-        ↓
-Test Scenario Design
-        ↓
-Test Case Design
-        ↓
-Test Data Preparation
-        ↓
-Test Execution
-        ↓
-Defect Identification
-        ↓
-Bug Reporting
-        ↓
-Retesting
-        ↓
-Regression Testing
-        ↓
-Test Summary
+Requirements
+     ↓
+Manual Testing
+     ↓
+API Testing
+     ↓
+Database Testing
+     ↓
+UI Automation
+     ↓
+CI/CD
+     ↓
+Quality Reporting
