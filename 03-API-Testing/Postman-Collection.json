@@ -1,0 +1,95 @@
+{
+  "info": {
+    "_postman_id": "qa-internship-jsonplaceholder-001",
+    "name": "QA Internship Portfolio - JSONPlaceholder API",
+    "description": "API testing collection created for the QA Engineer Internship Portfolio.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Valid Post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            "1"
+          ]
+        },
+        "description": "Verify that a valid post can be retrieved successfully."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Response is JSON\", function () {",
+              "    pm.response.to.be.json;",
+              "});",
+              "",
+              "pm.test(\"Response contains post ID 1\", function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.id).to.eql(1);",
+              "});",
+              "",
+              "pm.test(\"Response contains required fields\", function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response).to.have.property(\"userId\");",
+              "    pm.expect(response).to.have.property(\"id\");",
+              "    pm.expect(response).to.have.property(\"title\");",
+              "    pm.expect(response).to.have.property(\"body\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Invalid Post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/999999",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            "999999"
+          ]
+        },
+        "description": "Negative test for a non-existing post resource."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Request returns a valid HTTP response\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
